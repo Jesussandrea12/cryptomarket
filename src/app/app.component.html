@@ -1,44 +1,44 @@
-<nav class="navbar is-warning">
-  <div class="navbar-brand">
-    <a class="navbar-item">{{ title }}</a>
-  </div>
+<nav class="navbar navbar-light" style="background-color: hsl(48, 100%, 67%);">
+  <a class="navbar-brand" href="#">
+    {{ title }}
+  </a>
 </nav>
 
-<section class="hero is-medium is-light">
+<section class="hero">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
+      <h2>
         Get the lastest news about Cryptocurrencies 📈
-      </h1>
-      <h2 class="subtitle">
-        Thanks to <a target="_blank" href="https://coinmarketcap.com/">Coinmarketcap.com</a>
       </h2>
+      <h3>
+        Thanks to <a target="_blank" href="https://coinmarketcap.com/">Coinmarketcap.com</a>
+      </h3>
     </div>
   </div>
 </section>
 
 <div class="container">
-  <table class="table is-narrow is-hoverable is-fullwidth">
+  <table class="table table-hover table-responsive">
     <thead>
       <tr>
         <th>Rank</th>
         <th>Symbol</th>
         <th>Name</th>
-        <th>Market Cap</th>
         <th>Price</th>
         <th>Max</th>
+        <th>Market Cap</th>
         <th>Change (24H)</th>
         <th>Circulating</th>
       </tr>
     </thead>
     <tbody *ngFor="let coin of coins">
       <tr>
-        <th>#{{ coin.rank }}</th>
+        <th scope="row">#{{ coin.rank }}</th>
         <th>{{ coin.symbol }}</th>
-        <th><a>{{ coin.name }}</a></th>
-        <th>${{ coin.market_cap_usd }}</th>
+        <th class="is-primary">{{ coin.name }}</th>
         <th class="is-success">${{ coin.price_usd }} USD</th>
         <th>{{ coin.max_supply }}</th>
+        <th>${{ coin.market_cap_usd }}</th>
         <th class="is-danger">{{ coin.percent_change_24h }}%</th>
         <th>{{ coin.available_supply }} {{ coin.symbol }}</th>
       </tr>

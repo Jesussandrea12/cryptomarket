@@ -1,3 +1,30 @@
 .card {
   margin: 1em;
 }
+
+.hero {
+  display: flex;
+  min-height: 330px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-color: hsl(0, 0%, 96%);
+}
+
+.is-success {
+  background-color: hsl(141, 71%, 48%);
+}
+
+.is-danger {
+  background-color: hsl(348, 100%, 61%);
+}
+
+.is-primary {
+  color: hsl(217, 71%, 53%);
+}
+
+footer {
+  text-align: center;
+  padding: 5em 0;
+  background: whitesmoke;
+}
